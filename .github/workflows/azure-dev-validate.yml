@@ -23,7 +23,6 @@ jobs:
         with:
           inlineScript: |
             tdnf install -y icu
-            tndf install -y jq
             az config set bicep.use_binary_from_path=false && az bicep build -f infra/main.bicep --stdout
 
       - name: Run Microsoft Security DevOps Analysis
